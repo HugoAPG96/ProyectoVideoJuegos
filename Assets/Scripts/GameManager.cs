@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public IntiMovement intiMovement; // Referencia al script de movimiento del jugador
-    public int PuntosTotales { get; private set; }
+    public int PuntosTotales { get; set; }
     private int puntosTotales;
 
     private int vidas = 3;

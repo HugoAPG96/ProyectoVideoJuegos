@@ -6,8 +6,10 @@ public class MenuSystem :  MonoBehaviour
 {
     public void Jugar()
     {
-        SceneManager.LoadScene("Nivel_1");
+        SceneManager.LoadScene("Nivel_1");      // Carga el primer nivel
+        GameManager.Instance.PuntosTotales = 0; // Reinicia el puntaje
     }
+
 
     public void Salir()
     {

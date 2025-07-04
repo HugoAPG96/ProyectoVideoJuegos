@@ -22,8 +22,12 @@ namespace Assets.Scripts
         private int jumpCount = 0;
         private bool isJumping = false;
 
+        private bool recibeDanio;
+
         public float DoubleJumpForce = 7f;
         public AudioClip DoubleJumpSound;
+
+        public float fuerzaRebote = 5f;
 
         public float fallMultiplier = 2.5f;
         public float lowJumpMultiplier = 2f;
@@ -108,6 +112,7 @@ namespace Assets.Scripts
             {
                 Hit(true); // Pierde una vida al caer
             }
+
         }
     
 
@@ -212,5 +217,6 @@ namespace Assets.Scripts
             Rigidbody2D.linearVelocity = Vector2.zero; // Detiene cualquier movimiento
             Animator.SetTrigger("hurt"); // Muestra animación de daño
         }
+
     }
 }

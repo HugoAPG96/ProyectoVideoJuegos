@@ -55,4 +55,20 @@ public class GeneradorObstaculo : MonoBehaviour
         }
     }
 
+    public void DestroyRama()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        IntiMovement inti = collision.gameObject.GetComponent<IntiMovement>();
+
+        if (inti != null)
+        {
+            Debug.Log("Jugador tocado por rama");
+            inti.Hit(true);
+        }
+    }
+
 }
